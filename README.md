@@ -1,6 +1,12 @@
 # RDD_programming_basics
 <p>Two types of Apache Spark RDD operations are- Transformations and Actions. A Transformation is a function that produces new RDD from the existing RDDs but when we want to work with the actual dataset, at that point Action is performed. When the action is triggered after the result, new RDD is not formed like transformation. </P>
 <h2>Transformations</h2>
+<p>Spark Transformation is a function that produces new RDD from the existing RDDs. It takes RDD as input and produces one or more RDD as output. Each time it creates new RDD when we apply any transformation. Thus, the so input RDDs, cannot be changed since RDD are immutable in nature.</p>
+
+<p>Applying transformation built an RDD lineage, with the entire parent RDDs of the final RDD(s). RDD lineage, also known as RDD operator graph or RDD dependency graph. It is a logical execution plan i.e., it is Directed Acyclic Graph (DAG) of the entire parent RDDs of RDD.</p>
+
+<p>Transformations are lazy in nature i.e., they get execute when we call an action. They are not executed immediately. Two most basic type of transformations is a map(), filter().</p>
+<p>After the transformation, the resultant RDD is always different from its parent RDD. It can be smaller (e.g. filter, count, distinct, sample), bigger (e.g. flatMap(), union(), Cartesian()) or the same size (e.g. map).</p>
 <table>
 <tbody><tr><th style="width:25%">Transformation</th><th>Meaning</th></tr>
 <tr>
@@ -101,7 +107,11 @@
   each partition because it can push the sorting down into the shuffle machinery. </td>
 </tr>
 </tbody></table>
+<br>
 <h2>Actions</h2>
+<p>Transformations create RDDs from each other, but when we want to work with the actual dataset, at that point action is performed. When the action is triggered after the result, new RDD is not formed like transformation. Thus, Actions are Spark RDD operations that give non-RDD values. The values of action are stored to drivers or to the external storage system. It brings laziness of RDD into motion.</p>
+
+<p>An action is one of the ways of sending data from Executer to the driver. Executors are agents that are responsible for executing a task. While the driver is a JVM process that coordinates workers and execution of the task.</p>
 <table>
 <tbody><tr><th>Action</th><th>Meaning</th></tr>
 <tr>
@@ -159,4 +169,5 @@
   
 </table>
 
-Reference Link <a href='https://spark.apache.org/docs/latest/rdd-programming-guide.html'>link</a>
+Reference Link <a href='https://spark.apache.org/docs/latest/rdd-programming-guide.html'>link</a><br>
+https://data-flair.training/blogs/spark-rdd-operations-transformations-actions/
