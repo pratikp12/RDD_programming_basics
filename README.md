@@ -169,5 +169,5 @@
   
 </table>
 
-Reference Link <a href='https://spark.apache.org/docs/latest/rdd-programming-guide.html'>link</a><br>
-https://data-flair.training/blogs/spark-rdd-operations-transformations-actions/
+[1]Reference Link <a href='https://spark.apache.org/docs/latest/rdd-programming-guide.html'>link</a><br>
+[2]Spark RDD Operations-Transformation & Action with Example https://data-flair.training/blogs/spark-rdd-operations-transformations-actions/
