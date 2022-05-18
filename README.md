@@ -1,5 +1,5 @@
 # RDD_programming_basics
-
+<p>Two types of Apache Spark RDD operations are- Transformations and Actions. A Transformation is a function that produces new RDD from the existing RDDs but when we want to work with the actual dataset, at that point Action is performed. When the action is triggered after the result, new RDD is not formed like transformation. </P>
 <h2>Transformations</h2>
 <table>
 <tbody><tr><th style="width:25%">Transformation</th><th>Meaning</th></tr>
